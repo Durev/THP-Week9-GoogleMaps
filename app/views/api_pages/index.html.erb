@@ -1,0 +1,40 @@
+<h1>API Google</h1>
+
+<!-- <form action="/" method="post">
+	<input type="" name="">
+
+	<label>Longitude</label>
+	<input type="text" name="coord[lgt]">
+	<label>Latitude</label>
+	<input type="text" name="coord[lat]">
+
+	<input type="reset" name="Effacer">
+	<input type="submit" name="Envoyer">
+</form> -->
+
+<div class="form" id="test">
+	<label>Longitude :</label>
+	<input type="text" id="longitude">
+	<label>Latitude :</label>
+	<input type="text" id="latitude">
+	<button id="submit">Créer</button>
+</div>
+
+<p>Click me!</p> 
+
+<hr>
+
+<div id="googleMap"></div>
+
+<script>
+	$('#submit').on('click', function() {
+		var latitude = $("#latitude").val();
+		var longitude = $("#longitude").val();
+
+		console.log(latitude);
+		console.log(longitude);
+
+		newMarker(5);
+
+	});
+</script>
